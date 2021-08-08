@@ -7,16 +7,22 @@ textErr = '';
 
 document.addEventListener('keydown', function (event) {
 
+  if(event.key === 'Backspace'){
 
-  if(event.key === textIn[0]){
+    textErr = textErr.substring(0, textErr.length - 1);
+
+  }
+
+  else if(event.key === textIn[0] && textErr.length === 0){
 
     textTyped = textTyped + textIn[0];
     textIn = textIn.substring(1);
     textErr = '';
     console.log(textTyped);
-  } else
 
-  if(event.key !== textIn[0] && event.key !== 'Shift'){
+  }
+
+  else if(event.key !== 'Shift'){
 
     textErr = textErr + event.key;
 
