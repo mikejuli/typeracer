@@ -9,7 +9,17 @@ document.addEventListener('keydown', function (event) {
 
   if(event.key === 'Backspace'){
 
-    textErr = textErr.substring(0, textErr.length - 1);
+    if (textErr.length !==0)
+    {
+      textErr = textErr.substring(0, textErr.length - 1);
+    }
+
+    else
+    {
+      textIn = textTyped[textTyped.length-1] + textIn;
+      textTyped = textTyped.substring(0, textTyped.length - 1);
+
+    }
 
   }
 
