@@ -6,7 +6,7 @@ textTyped = '';
 textErr = '';
 
 document.addEventListener('keydown', function (event) {
-
+ console.log(textErr);
   if(event.key === 'Backspace'){
 
     if (textErr.length !==0)
@@ -38,7 +38,8 @@ document.addEventListener('keydown', function (event) {
 
   }
 
-  document.getElementById("text").innerHTML = '<span style = "color:#0ad12c">' + textTyped +'</span>' + '<span style = "color:red">'+ textErr +'</span>' + textIn;
+
+  document.getElementById("text").innerHTML = '<span style = "color:#0ad12c">' + textTyped +'</span>' + '<span style = "background-color: #d197a5 ; color: red; margin-right: -2px">'+ textErr +'</span><span class="blinking-cursor">|</span>' + textIn;
 
 
 });

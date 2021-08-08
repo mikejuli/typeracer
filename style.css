@@ -2,6 +2,7 @@
 color: black;
 font-family: fantasy;
 font-size: 30px;
+white-space: pre-wrap;
 
 }
 
@@ -9,7 +10,7 @@ font-size: 30px;
   display: flex;
   padding: auto;
   margin: auto;
-color: rgb(10, 209, 44);
+color: #0ad12c;
 font-family: fantasy;
 font-size: 30px;
 
@@ -23,5 +24,22 @@ font-size: 30px;
   border: solid 1px blue;
   margin: 20px;
   padding: 15px;
+}
+
+
+
+.blinking-cursor {
+
+  color: #ffffff;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  30% {
+    color: rgb(255, 255, 255);
+  }
 }
 
